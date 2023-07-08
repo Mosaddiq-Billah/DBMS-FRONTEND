@@ -41,28 +41,28 @@ const LoginForm = () => {
       setEmail("");
       setPassword("");
 
-      fetch("http://localhost:5000/login", {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status === "ok") {
-          alert(`Logged in successfully!`);
-        } else if (data.error) {
-          alert(`Loggin failed: ${data.error}`);
-        }
-        console.log(data, "userLoggIn");
-      });
+      // fetch("http://localhost:5000/login", {
+      //   method: "POST",
+      //   crossDomain: true,
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     Accept: "application/json",
+      //     "Access-Control-Allow-Origin": "*",
+      //   },
+      //   body: JSON.stringify({
+      //     email,
+      //     password,
+      //   }),
+      // })
+      // .then((res) => res.json())
+      // .then((data) => {
+      //   if (data.status === "ok") {
+      //     alert(`Logged in successfully!`);
+      //   } else if (data.error) {
+      //     alert(`Loggin failed: ${data.error}`);
+      //   }
+      //   console.log(data, "userLoggIn");
+      // });
       
     }
   };

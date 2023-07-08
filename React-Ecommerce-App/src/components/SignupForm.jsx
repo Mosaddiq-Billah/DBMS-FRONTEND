@@ -59,28 +59,28 @@ const SignupForm = () => {
       console.log(password);
       console.log(email);
       
-      fetch("http://localhost:5000/register", {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({
-          name,
-          password,
-          email,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.status === "ok") {
-            alert(`User ${name} registered successfully!`);
-          } else if (data.error) {
-            alert(`Registration failed: ${data.error}`);
-          }
-          console.log(data, "userRegister");
-        });
+      // fetch("http://localhost:5000/register", {
+      //   method: "POST",
+      //   crossDomain: true,
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Access-Control-Allow-Origin": "*",
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     password,
+      //     email,
+      //   }),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     if (data.status === "ok") {
+      //       alert(`User ${name} registered successfully!`);
+      //     } else if (data.error) {
+      //       alert(`Registration failed: ${data.error}`);
+      //     }
+      //     console.log(data, "userRegister");
+      //   });
     
       }
         

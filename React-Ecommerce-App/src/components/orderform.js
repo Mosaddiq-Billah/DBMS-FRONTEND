@@ -97,32 +97,32 @@ const OrderNowForm = ({ itemTitle, price}) => {
       console.log(address);
       console.log(city);
   
-      fetch("http://localhost:5000/orders", {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          address,
-          city,
-          zipcode,
-          itemTitle,
-          price
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data, "Order sent");
+      // fetch("http://localhost:5000/orders", {
+      //   method: "POST",
+      //   crossDomain: true,
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Access-Control-Allow-Origin": "*",
+      //   },
+      //   body: JSON.stringify({
+      //     name,
+      //     email,
+      //     phone,
+      //     address,
+      //     city,
+      //     zipcode,
+      //     itemTitle,
+      //     price
+      //   }),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data, "Order sent");
          
-        })
-        .catch((error) => {
-          console.log("Error sending order:", error);
-        });
+      //   })
+      //   .catch((error) => {
+      //     console.log("Error sending order:", error);
+      //   });
     }
 
   };
